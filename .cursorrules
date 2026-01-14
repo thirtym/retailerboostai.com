@@ -1,0 +1,30 @@
+# RetailerBoost Website Guidelines
+
+## Language & Spelling
+- Always use **US English spellings** (e.g., "optimization" not "optimisation", "color" not "colour", "analyze" not "analyse")
+- Common US spelling reminders:
+  - -ize endings (optimize, customize, maximize)
+  - -or endings (color, favor, behavior)
+  - -er endings (center, meter)
+  - -og endings (catalog, dialog)
+  - -ment without e (judgment, acknowledgment)
+  - -ense endings (defense, license)
+
+## Tone & Style
+- **Limited emoji use** - Our ICP (enterprise retailers, PPC managers) expects professional communication
+- Emojis are acceptable sparingly in UI elements (e.g., Before/After cards) but avoid overuse
+- Keep copy professional, clear, and benefit-focused
+- Focus on outcomes: orders generated, revenue, ROI
+
+## Brand Voice
+- Confident but not arrogant
+- Technical credibility without jargon overload
+- Emphasize the zero-risk, pay-on-results model
+- Ada is an AI agent, not a tool or software
+
+## Technical
+- All pages should use the dark theme with consistent CSS variables
+- DM Sans is the primary font family
+- Primary color: #247CFF (blue)
+- Background: #0B1314 (dark)
+
