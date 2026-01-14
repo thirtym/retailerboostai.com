@@ -338,6 +338,47 @@
         filter: grayscale(0%) brightness(1);
       }
       
+      /* Benefit Statements */
+      .benefit-statements {
+        padding: 4rem 2rem;
+        background: var(--color-bg);
+      }
+      
+      .benefit-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      
+      .benefit-card {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        transition: border-color 0.3s ease;
+      }
+      
+      .benefit-card:hover {
+        border-color: rgba(36, 124, 255, 0.4);
+      }
+      
+      .benefit-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+      }
+      
+      .benefit-desc {
+        font-size: 0.95rem;
+        color: var(--color-text-muted);
+        line-height: 1.5;
+      }
+      
       /* Testimonial Section */
       .testimonial-section {
         padding: 4rem 2rem;
@@ -894,6 +935,114 @@
         line-height: 1.6;
       }
       
+      /* FAQ Section */
+      .faq-section {
+        padding: 5rem 2rem;
+        background: var(--color-bg-light);
+      }
+      
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .faq-heading {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--color-text);
+        text-align: center;
+        margin-bottom: 0.75rem;
+      }
+      
+      .faq-subheading {
+        text-align: center;
+        font-size: 1.15rem;
+        color: var(--color-text-muted);
+        margin-bottom: 3rem;
+      }
+      
+      .faq-list {
+        border: 1px solid var(--color-border);
+        border-radius: 20px;
+        padding: 2rem;
+        background: var(--color-bg-card);
+      }
+      
+      .faq-item {
+        border-bottom: 1px solid var(--color-border);
+        padding: 1.25rem 0;
+      }
+      
+      .faq-item:first-child {
+        padding-top: 0;
+      }
+      
+      .faq-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      
+      .faq-question {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        padding: 0;
+      }
+      
+      .faq-question h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin: 0;
+        padding-right: 1rem;
+      }
+      
+      .faq-icon {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        font-weight: 300;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+      
+      .faq-question.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+      
+      .faq-answer.open {
+        max-height: 500px;
+        padding-top: 1rem;
+      }
+      
+      .faq-answer p {
+        color: var(--color-text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+      
+      .faq-cta {
+        text-align: center;
+        margin-top: 2.5rem;
+      }
+      
+      .faq-cta p {
+        color: var(--color-text-muted);
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      
       /* CTA Section */
       .cta-section {
         padding: 6rem 2rem;
@@ -1000,6 +1149,11 @@
         .hero-container {
           grid-template-columns: 1fr;
           text-align: center;
+        }
+        
+        .benefit-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
         }
         
         .hero-headline {
@@ -1121,7 +1275,8 @@
         <div class="nav-links">
           <a class="nav-link" href="#why">Why Ada</a>
           <a class="nav-link" href="#how-it-works">How Ada Works</a>
-          <a class="nav-link" href="#capabilities">Ada's Capabilities</a>
+          <a class="nav-link" href="#capabilities">Capabilities</a>
+          <a class="nav-link" href="#faq">FAQs</a>
         </div>
         <div class="nav-ctas">
           <a href="#" onclick="openCalendly('nav');return false;" class="nav-link">Schedule a Call</a>
@@ -1178,6 +1333,24 @@
           <img src="/assets/images/ebay.svg" alt="eBay" />
           <img src="/assets/images/lego.svg" alt="LEGO" />
           <img src="/assets/images/nintendo.svg" alt="Nintendo" />
+        </div>
+      </section>
+      
+      <!-- Benefit Statements -->
+      <section class="benefit-statements">
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <div class="benefit-title">Hire an AI Shopping Agent at Zero Upfront Cost</div>
+            <div class="benefit-desc">No retainers. No ad spend from you. Ada invests her own capital to run your campaigns.</div>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-title">Ada Generates Incremental Orders 24/7</div>
+            <div class="benefit-desc">Working around the clock to surface products Google's algorithm is ignoring.</div>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-title">5-Minute Setup, No Integration Headaches</div>
+            <div class="benefit-desc">Connect your Merchant Center, install tracking, and Ada gets to work.</div>
+          </div>
         </div>
       </section>
       
@@ -1505,6 +1678,131 @@
                 <div class="point-description">Your commission rate locks in your ROI. 12% = 833% return, always.</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- FAQ Section -->
+      <section id="faq" class="faq-section">
+        <div class="faq-container">
+          <h2 class="faq-heading">Frequently Asked Questions</h2>
+          <p class="faq-subheading">Common questions from merchants considering Ada</p>
+          
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>What is Ada?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Ada is an AI Google Shopping agent that runs incremental campaigns alongside your existing setup. She invests her own capital to fund ad spend and you only pay a commission on the orders she generates.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>How is this incremental? Won't Ada compete with my existing campaigns?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Ada focuses on products that are receiving zero or near-zero impressions in your current campaigns—the ignored portion of your catalog. She runs in a separate Google Ads account with her own capital. You only pay Ada when she's the last paid click before purchase, so if your own campaigns win the click, you don't pay Ada.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>What do I need to get started?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>You need a live store on a custom domain, an approved Google Merchant Center account in good standing with an active product feed, and RetailerBoost tracking installed. Setup takes about 5 minutes.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>What is the commission rate?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Commission starts at 12% minimum and is set during onboarding. The best rate depends on your category, conversion rate, and average order value. Higher commission allows Ada to bid more aggressively and drive more volume. Commission is calculated on the order subtotal, excluding tax, shipping, and discounts.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>How does the fixed ROI work?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Because you only pay a fixed percentage of each order, your ROI is mathematically locked in. At 12% commission, every $1 paid returns $8.33 in revenue—guaranteed. Ada takes on all the ad spend variability, so your cost-per-acquisition is always predictable.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>What happens if Ada's ad spend exceeds the commission?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>That's Ada's risk, not yours. If she spends more on ads than she earns in commission, we absorb the loss. You never pay more than the agreed commission on Ada-attributed sales.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>Do you charge any setup fee, retainer, or monthly minimum?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>No. There's no retainer, setup fee, or monthly minimum. You only pay commission when Ada generates sales. If Ada generates zero orders, you pay zero.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>Can I choose which products Ada advertises?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. You can control what's advertised through your Merchant Center feed. You can also request inclusions or exclusions using product tags, categories, or custom labels. Ada works within the boundaries you set.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>Can I run Ada alongside my existing agency or in-house team?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Ada runs independently and you can continue running your own campaigns. Your campaigns, your strategy, your existing setup—all untouched. Ada focuses on the products your current campaigns aren't reaching.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>Does Ada learn and improve over time?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Ada continuously analyzes your catalog performance, learns which products convert, and optimizes her bidding and targeting in real-time. The longer she runs, the smarter she gets about your specific inventory.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                <h4>Can I cancel anytime?</h4>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. No contracts, no notice periods. One email and we pause. You're never locked in. Ada only continues running if it works for everyone.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-cta">
+            <p>Can't find what you're looking for?</p>
+            <a href="#" onclick="openCalendly('faq');return false;" class="btn btn-primary">Book a Call</a>
           </div>
         </div>
       </section>
