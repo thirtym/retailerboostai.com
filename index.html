@@ -851,44 +851,47 @@
       }
       
       .commercial-points {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
       }
       
       .commercial-point {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
         gap: 1rem;
-        padding: 1.25rem 1.75rem;
+        padding: 2rem 1.5rem;
         background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
       }
       
       .point-icon {
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
-        background: var(--gradient-primary);
+        background: rgba(36, 124, 255, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.75rem;
       }
       
       .point-title {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: var(--color-text);
         margin-bottom: 0.25rem;
       }
       
       .point-description {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--color-text-muted);
+        line-height: 1.6;
       }
       
       /* CTA Section */
@@ -1099,8 +1102,7 @@
         }
         
         .commercial-points {
-          flex-direction: column;
-          align-items: center;
+          grid-template-columns: 1fr;
         }
         
         .nav-links {
@@ -1560,25 +1562,19 @@
             <p class="commercial-text">Ada invests her own capital to run your campaigns. You pay Ada a pre-agreed percentage only on the orders her campaigns generate. This is not a software fee or a management retainer. It is a pure performance partnership.</p>
             <div class="commercial-points">
               <div class="commercial-point">
-                <div class="point-icon">$</div>
-                <div class="point-content">
-                  <div class="point-title">Ada Funds All Ad Spend</div>
-                  <div class="point-description">RetailerBoost capital, not yours. You never see an ad spend invoice.</div>
-                </div>
+                <div class="point-icon">💰</div>
+                <div class="point-title">Ada Funds All Ad Spend</div>
+                <div class="point-description">RetailerBoost capital, not yours. You never see an ad spend invoice.</div>
               </div>
               <div class="commercial-point">
-                <div class="point-icon">%</div>
-                <div class="point-content">
-                  <div class="point-title">Custom Commission Rate</div>
-                  <div class="point-description">Starting at 12%. Negotiate a rate that fits your margins and volume goals.</div>
-                </div>
+                <div class="point-icon">📊</div>
+                <div class="point-title">Custom Commission Rate</div>
+                <div class="point-description">Starting at 12%. Negotiate a rate that fits your margins and volume goals.</div>
               </div>
               <div class="commercial-point">
-                <div class="point-icon">R</div>
-                <div class="point-content">
-                  <div class="point-title">Guaranteed ROI</div>
-                  <div class="point-description">Your commission rate locks in your ROI. 12% = 833% return, always.</div>
-                </div>
+                <div class="point-icon">🎯</div>
+                <div class="point-title">Guaranteed ROI</div>
+                <div class="point-description">Your commission rate locks in your ROI. 12% = 833% return, always.</div>
               </div>
             </div>
           </div>
