@@ -333,6 +333,16 @@
         z-index: 1;
       }
       
+      .activity-header {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-text-dim);
+        margin-bottom: 0.75rem;
+        padding-left: 0.25rem;
+      }
+      
       .activity-item {
         display: flex;
         align-items: center;
@@ -1310,9 +1320,10 @@
                 Running incremental campaigns
               </div>
               <div class="agent-activity">
+                <div class="activity-header">Performance in the last 24 hours</div>
                 <div class="activity-item highlight">
                   <span class="activity-icon">💰</span>
-                  <span>Invested <span class="activity-value" id="ada-spend">$0</span> in ads today</span>
+                  <span>Invested <span class="activity-value" id="ada-spend">$0</span> in ads</span>
                 </div>
                 <div class="activity-item">
                   <span class="activity-icon">🔍</span>
