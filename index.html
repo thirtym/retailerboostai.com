@@ -241,7 +241,7 @@
         background: linear-gradient(145deg, rgba(36, 124, 255, 0.1), rgba(51, 208, 196, 0.05));
         border: 1px solid rgba(36, 124, 255, 0.3);
         border-radius: 24px;
-        padding: 2rem;
+        padding: 2.5rem;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -264,15 +264,15 @@
       }
       
       .agent-avatar {
-        width: 180px;
-        height: 180px;
+        width: 260px;
+        height: 260px;
         border-radius: 50%;
         background: var(--gradient-primary);
-        padding: 4px;
+        padding: 5px;
         margin: 0 auto 1.5rem;
         position: relative;
         z-index: 1;
-        box-shadow: 0 0 40px rgba(36, 124, 255, 0.4), 0 0 80px rgba(36, 124, 255, 0.2);
+        box-shadow: 0 0 50px rgba(36, 124, 255, 0.5), 0 0 100px rgba(36, 124, 255, 0.25);
       }
       
       .agent-avatar img {
@@ -300,96 +300,7 @@
         z-index: 1;
       }
       
-      .agent-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: rgba(51, 208, 196, 0.1);
-        border-radius: 100px;
-        font-size: 0.9rem;
-        color: var(--color-accent);
-        margin-bottom: 1.5rem;
-        position: relative;
-        z-index: 1;
-      }
       
-      .status-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--color-accent);
-        animation: blink 2s ease-in-out infinite;
-      }
-      
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.3; }
-      }
-      
-      .agent-activity {
-        text-align: left;
-        position: relative;
-        z-index: 1;
-      }
-      
-      .activity-header {
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--color-text-dim);
-        margin-bottom: 0.75rem;
-        padding-left: 0.25rem;
-      }
-      
-      .activity-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 1rem 1.25rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        margin-bottom: 0.75rem;
-        font-size: 0.95rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        opacity: 0;
-        transform: translateY(10px);
-        animation: fadeSlideIn 0.6s ease forwards;
-      }
-      
-      .activity-item:nth-child(1) { animation-delay: 0.3s; }
-      .activity-item:nth-child(2) { animation-delay: 0.5s; }
-      .activity-item:nth-child(3) { animation-delay: 0.7s; }
-      
-      @keyframes fadeSlideIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .activity-item .activity-value {
-        font-weight: 700;
-        color: var(--color-accent);
-      }
-      
-      .activity-item.highlight {
-        background: rgba(51, 208, 196, 0.1);
-        border-color: rgba(51, 208, 196, 0.2);
-      }
-      
-      .activity-icon {
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
-        background: rgba(36, 124, 255, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        flex-shrink: 0;
-      }
       
       /* Logo Bar */
       .logo-bar {
@@ -1276,7 +1187,7 @@
         </div>
         <div class="nav-ctas">
           <a href="#" onclick="openCalendly('nav');return false;" class="nav-link">Schedule a Call</a>
-          <a href="https://app.retailerboost.com/signup?utm_source=retailerboost.com&utm_medium=inbound&utm_campaign=website&utm_content=nav" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+          <a href="https://app.retailerboost.com/signup?utm_source=retailerboost.com&utm_medium=inbound&utm_campaign=website&utm_content=nav" target="_blank" rel="noopener" class="btn btn-primary">Hire Ada</a>
         </div>
       </div>
     </nav>
@@ -1315,25 +1226,6 @@
               </div>
               <div class="agent-name">Ada</div>
               <div class="agent-role">AI Google Shopping Ads Agent</div>
-              <div class="agent-status">
-                <span class="status-dot"></span>
-                Running incremental campaigns
-              </div>
-              <div class="agent-activity">
-                <div class="activity-header">Performance in the last 24 hours</div>
-                <div class="activity-item highlight">
-                  <span class="activity-icon">💰</span>
-                  <span>Invested <span class="activity-value" id="ada-spend">$0</span> in ads</span>
-                </div>
-                <div class="activity-item">
-                  <span class="activity-icon">🔍</span>
-                  <span>Found <span class="activity-value" id="ada-products">0</span> untapped products</span>
-                </div>
-                <div class="activity-item highlight">
-                  <span class="activity-icon">📦</span>
-                  <span>Generated <span class="activity-value" id="ada-orders">0</span> incremental orders</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1700,7 +1592,7 @@
             <h2 class="cta-heading">Ready to Add Ada to Your Team?</h2>
             <p class="cta-text">Ada starts working within days. She analyzes your catalog, identifies incremental opportunity, and begins investing. You pay nothing until she delivers results.</p>
             <div class="cta-buttons">
-              <a href="https://app.retailerboost.com/signup?utm_source=retailerboost.com&utm_medium=inbound&utm_campaign=website&utm_content=footer-cta" target="_blank" rel="noopener" class="btn btn-primary">Get Started in 5 Minutes</a>
+              <a href="https://app.retailerboost.com/signup?utm_source=retailerboost.com&utm_medium=inbound&utm_campaign=website&utm_content=footer-cta" target="_blank" rel="noopener" class="btn btn-primary">Hire Ada</a>
               <a href="#" onclick="openCalendly('footer-cta');return false;" class="btn btn-secondary">Talk to Our Team</a>
             </div>
             <div class="cta-commitment">
@@ -1796,90 +1688,5 @@
     })();
     </script>
     
-    <!-- Ada Activity Stats Animation -->
-    <script>
-    (function() {
-      'use strict';
-      
-      // Seeded random number generator based on date (consistent within a day)
-      function seededRandom(seed) {
-        var x = Math.sin(seed) * 10000;
-        return x - Math.floor(x);
-      }
-      
-      // Get today's date as a seed (changes daily at midnight)
-      function getDailySeed() {
-        var now = new Date();
-        return now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
-      }
-      
-      // Generate impressive but believable daily stats
-      function generateDailyStats() {
-        var seed = getDailySeed();
-        
-        // Ad spend: $12,000 - $47,000 range (impressive daily spend)
-        var spend = Math.floor(12000 + seededRandom(seed * 1) * 35000);
-        
-        // Products found: 180 - 420 range (lots of untapped potential)
-        var products = Math.floor(180 + seededRandom(seed * 2) * 240);
-        
-        // Orders generated: 85 - 215 range (strong performance)
-        var orders = Math.floor(85 + seededRandom(seed * 3) * 130);
-        
-        return { spend: spend, products: products, orders: orders };
-      }
-      
-      // Animate counting up to a number
-      function animateValue(element, start, end, duration, prefix, suffix) {
-        prefix = prefix || '';
-        suffix = suffix || '';
-        var startTimestamp = null;
-        
-        function step(timestamp) {
-          if (!startTimestamp) startTimestamp = timestamp;
-          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          // Easing function for smooth deceleration
-          var easeOut = 1 - Math.pow(1 - progress, 3);
-          var current = Math.floor(start + (end - start) * easeOut);
-          element.textContent = prefix + current.toLocaleString() + suffix;
-          if (progress < 1) {
-            window.requestAnimationFrame(step);
-          }
-        }
-        
-        window.requestAnimationFrame(step);
-      }
-      
-      // Initialize when DOM is ready
-      function init() {
-        var stats = generateDailyStats();
-        
-        var spendEl = document.getElementById('ada-spend');
-        var productsEl = document.getElementById('ada-products');
-        var ordersEl = document.getElementById('ada-orders');
-        
-        if (spendEl && productsEl && ordersEl) {
-          // Delay animations to sync with the fadeSlideIn CSS animations
-          setTimeout(function() {
-            animateValue(spendEl, 0, stats.spend, 2000, '$', '');
-          }, 400);
-          
-          setTimeout(function() {
-            animateValue(productsEl, 0, stats.products, 1800, '', '');
-          }, 600);
-          
-          setTimeout(function() {
-            animateValue(ordersEl, 0, stats.orders, 1600, '', '');
-          }, 800);
-        }
-      }
-      
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
-    })();
-    </script>
   </body>
 </html>
