@@ -141,7 +141,7 @@
       
       /* Hero Section */
       .hero {
-        padding: 5rem 2rem;
+        padding: 5rem 2rem 3rem;
         background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-light) 100%);
         position: relative;
         overflow: hidden;
@@ -364,6 +364,246 @@
         font-size: 0.85rem;
       }
       
+      /* Logo Bar */
+      .logo-bar {
+        padding: 3rem 2rem;
+        background: var(--color-bg-light);
+        text-align: center;
+      }
+      
+      .logo-bar-text {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        margin-bottom: 2rem;
+      }
+      
+      .logo-bar-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+        opacity: 0.6;
+      }
+      
+      .logo-bar-logos img {
+        height: 32px;
+        width: auto;
+        filter: grayscale(100%) brightness(2);
+        transition: all 0.3s ease;
+      }
+      
+      .logo-bar-logos img:hover {
+        opacity: 1;
+        filter: grayscale(0%) brightness(1);
+      }
+      
+      /* Testimonial Section */
+      .testimonial-section {
+        padding: 4rem 2rem;
+        background: var(--color-bg);
+      }
+      
+      .testimonial-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .testimonial-stars {
+        color: #FFD700;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .testimonial-quote {
+        font-size: 1.35rem;
+        line-height: 1.9;
+        color: var(--color-text);
+        font-style: italic;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .testimonial-highlight {
+        color: var(--color-primary);
+        font-weight: 600;
+      }
+      
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      
+      .testimonial-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--color-primary);
+      }
+      
+      .testimonial-info {
+        text-align: left;
+      }
+      
+      .testimonial-name {
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+      
+      .testimonial-role {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+      }
+      
+      .testimonial-company {
+        color: var(--color-text-dim);
+        font-size: 0.9rem;
+      }
+      
+      /* Before/After Section */
+      .before-after-section {
+        padding: 5rem 2rem;
+        background: var(--color-bg-light);
+      }
+      
+      .before-after-container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      
+      .before-after-heading {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--color-text);
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .before-after-subheading {
+        font-size: 1.15rem;
+        color: var(--color-text-muted);
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+      }
+      
+      .before-after-grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 2rem;
+        align-items: stretch;
+      }
+      
+      .before-card, .after-card {
+        border-radius: 20px;
+        padding: 2.5rem;
+      }
+      
+      .before-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .after-card {
+        background: linear-gradient(145deg, rgba(36, 124, 255, 0.1), rgba(51, 208, 196, 0.05));
+        border: 1px solid rgba(36, 124, 255, 0.3);
+      }
+      
+      .card-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .before-card .card-label {
+        color: var(--color-text-dim);
+      }
+      
+      .after-card .card-label {
+        color: var(--color-accent);
+      }
+      
+      .card-items {
+        list-style: none;
+      }
+      
+      .card-items li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.95rem;
+      }
+      
+      .card-items li:last-child {
+        border-bottom: none;
+      }
+      
+      .before-card .card-items li {
+        color: var(--color-text-dim);
+      }
+      
+      .after-card .card-items li {
+        color: var(--color-text-muted);
+      }
+      
+      .item-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+      
+      .before-card .item-icon {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--color-text-dim);
+      }
+      
+      .after-card .item-icon {
+        background: rgba(51, 208, 196, 0.15);
+        color: var(--color-accent);
+      }
+      
+      .before-after-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .divider-arrow {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      
       /* Section Styles */
       .section {
         padding: 5rem 2rem;
@@ -387,7 +627,7 @@
       
       /* Why Section */
       .why-section {
-        background: var(--color-bg-light);
+        background: var(--color-bg);
       }
       
       .why-grid {
@@ -899,6 +1139,15 @@
           margin: 0 auto;
         }
         
+        .before-after-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        
+        .before-after-divider {
+          transform: rotate(90deg);
+        }
+        
         .why-grid,
         .incrementality-grid,
         .objections-grid {
@@ -930,6 +1179,14 @@
           align-items: center;
           gap: 0.75rem;
         }
+        
+        .logo-bar-logos {
+          gap: 2rem;
+        }
+        
+        .logo-bar-logos img {
+          height: 24px;
+        }
       }
       
       @media (max-width: 600px) {
@@ -937,7 +1194,8 @@
           font-size: 2rem;
         }
         
-        .section-heading {
+        .section-heading,
+        .before-after-heading {
           font-size: 1.75rem;
         }
         
@@ -948,6 +1206,19 @@
         
         .footer-container {
           flex-direction: column;
+        }
+        
+        .testimonial-quote {
+          font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .testimonial-info {
+          text-align: center;
         }
       }
     </style>
@@ -973,8 +1244,8 @@
         </a>
         <div class="nav-links">
           <a class="nav-link" href="#why">Why Ada</a>
-          <a class="nav-link" href="#how-it-works">How It Works</a>
-          <a class="nav-link" href="#capabilities">Capabilities</a>
+          <a class="nav-link" href="#how-it-works">How Ada Works</a>
+          <a class="nav-link" href="#capabilities">Ada's Capabilities</a>
         </div>
         <div class="nav-ctas">
           <a href="#" onclick="openCalendly('nav');return false;" class="nav-link">Schedule a Call</a>
@@ -1040,6 +1311,119 @@
         </div>
       </section>
       
+      <!-- Logo Bar -->
+      <section class="logo-bar">
+        <p class="logo-bar-text">From the team that generated $1.5 Billion in 2024 for the world's biggest brands</p>
+        <div class="logo-bar-logos">
+          <img src="/assets/images/boohoo.svg" alt="Boohoo" />
+          <img src="/assets/images/disney.svg" alt="Disney" />
+          <img src="/assets/images/ebay.svg" alt="eBay" />
+          <img src="/assets/images/lego.svg" alt="LEGO" />
+          <img src="/assets/images/nintendo.svg" alt="Nintendo" />
+        </div>
+      </section>
+      
+      <!-- Testimonial Section -->
+      <section class="testimonial-section">
+        <div class="testimonial-container">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            "Ada's pay-on-results model is genius. I was skeptical at first—how could someone else fund our advertising? But Ada works exactly as promised. We got sales from day one, and I love that we only pay after we've already made the sale. The <span class="testimonial-highlight">27.5% order uplift</span> in our first week alone made adding Ada a no-brainer. Setup took 5 minutes and now I can invest that freed-up cash flow into other areas of the business."
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="/assets/images/bea.jpeg" alt="Beatriz Nahuz" class="testimonial-photo" />
+            <div class="testimonial-info">
+              <div class="testimonial-name">Beatriz Nahuz</div>
+              <div class="testimonial-role">CEO - MenFirst</div>
+              <div class="testimonial-company">menfirst.com</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Before/After Section -->
+      <section class="before-after-section">
+        <div class="before-after-container">
+          <h2 class="before-after-heading">The Future is Automated</h2>
+          <p class="before-after-subheading">Stop drowning in manual campaign management. Let Ada handle the complexity while you focus on strategy.</p>
+          <div class="before-after-grid">
+            <div class="before-card">
+              <div class="card-label">
+                <span>✕</span> Before Ada
+              </div>
+              <ul class="card-items">
+                <li>
+                  <span class="item-icon">📊</span>
+                  <span>Manual bid adjustments in Google Ads</span>
+                </li>
+                <li>
+                  <span class="item-icon">📝</span>
+                  <span>Spreadsheet tracking & analysis</span>
+                </li>
+                <li>
+                  <span class="item-icon">🔍</span>
+                  <span>Keyword research & optimization</span>
+                </li>
+                <li>
+                  <span class="item-icon">📈</span>
+                  <span>Campaign performance monitoring</span>
+                </li>
+                <li>
+                  <span class="item-icon">⚙️</span>
+                  <span>Multiple campaign types to manage</span>
+                </li>
+                <li>
+                  <span class="item-icon">💰</span>
+                  <span>Budget risk on every test</span>
+                </li>
+                <li>
+                  <span class="item-icon">😴</span>
+                  <span>Campaigns pause while you sleep</span>
+                </li>
+              </ul>
+            </div>
+            <div class="before-after-divider">
+              <div class="divider-arrow">→</div>
+            </div>
+            <div class="after-card">
+              <div class="card-label">
+                <span>✓</span> After Ada
+              </div>
+              <ul class="card-items">
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>Autonomous real-time bid optimization</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>AI-powered performance analysis</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>Automatic query targeting</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>24/7 campaign optimization</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>One consolidated Shopping layer</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>Zero ad spend risk—Ada invests</span>
+                </li>
+                <li>
+                  <span class="item-icon">✓</span>
+                  <span>Ada never sleeps, always optimizing</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Why Section -->
       <section id="why" class="section why-section">
         <div class="container">
@@ -1067,7 +1451,7 @@
       </section>
       
       <!-- Incrementality Section -->
-      <section class="section">
+      <section class="section" style="background: var(--color-bg-light);">
         <div class="container">
           <h2 class="section-heading">A Separate Incremental Layer</h2>
           <p class="section-subheading">Ada does not replace your PPC team or agency. She adds a new layer that captures sales your existing campaigns cannot reach.</p>
