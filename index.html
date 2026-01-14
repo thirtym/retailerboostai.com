@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WPR55HV5');</script>
+    <!-- End Google Tag Manager -->
+    <!-- RB2B -->
+    <script>!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("QO92DHLLLGN7");</script>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="preload" as="image" href="/assets/images/RetailerBoost-Logo-Blue-White.png"/>
+    <link rel="stylesheet" href="/_next/static/css/7f4726b455727581.css" data-precedence="next"/>
+    <link rel="stylesheet" href="/_next/static/css/9ca7f0e1d91091e8.css" data-precedence="next"/>
+    <!-- Calendly widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <title>RetailerBoost for Agencies | Commission-Only Google Shopping</title>
+    <meta name="description" content="Add Google Shopping revenue to your clients without increasing their budgets. We fund the ads, you keep the client. Commission only on incremental sales."/>
+    <meta name="robots" content="noindex, nofollow, nocache"/>
+    <meta name="googlebot" content="noindex, nofollow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1"/>
+    <style>
+      /* Prevent horizontal scroll */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+      /* Ensure nav stays fixed on top */
+      .Navigation_nav__PiYhp {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+      }
+      /* Add padding to body to account for fixed nav */
+      main {
+        padding-top: 80px;
+      }
+      /* Glow animation for nav CTA */
+      @keyframes glowPulse {
+        0%, 100% {
+          box-shadow: 0 0 5px rgba(36, 124, 255, 0.4), 0 0 10px rgba(36, 124, 255, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 15px rgba(36, 124, 255, 0.6), 0 0 30px rgba(36, 124, 255, 0.4), 0 0 45px rgba(36, 124, 255, 0.2);
+        }
+      }
+      .Navigation_ctaButton__jQlAz {
+        animation: glowPulse 2.5s ease-in-out infinite;
+      }
+      /* Ensure navigation CTA is visible on mobile */
+      @media (max-width: 768px) {
+        .Navigation_ctaButton__jQlAz {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+        }
+        .nav-cta-group {
+          flex-direction: column;
+          gap: 0.5rem !important;
+        }
+        .nav-cta-secondary {
+          display: none !important;
+        }
+        .nav-links {
+          display: none !important;
+        }
+        .Hero_headline__ASVgO {
+          font-size: 2rem !important;
+        }
+        /* Make grids single column on mobile */
+        .use-cases-grid,
+        .not-grid,
+        .aligned-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      /* Team photos - grayscale with color on hover */
+      .team-photo {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+      .team-photo:hover {
+        filter: grayscale(0%);
+      }
+      /* FAQ expand/collapse */
+      .faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .faq-question { 
+        width: 100%; 
+        background: none; 
+        border: none; 
+        padding: 1.5rem 0; 
+        cursor: pointer; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        text-align: left;
+      }
+      .faq-question h4 { 
+        font-size: 1.15rem; 
+        font-weight: 600; 
+        color: #fff; 
+        margin: 0; 
+      }
+      .faq-icon { 
+        color: #247CFF; 
+        font-size: 1.5rem; 
+        font-weight: 300;
+        transition: transform 0.3s ease;
+      }
+      .faq-answer { 
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0;
+      }
+      .faq-answer.open { 
+        max-height: 500px; 
+        padding-bottom: 1.5rem;
+      }
+      .faq-answer p { 
+        color: #cccccc; 
+        line-height: 1.7; 
+        font-size: 1rem; 
+        margin: 0;
+      }
+      .faq-question.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      /* Control table styles */
+      .control-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+      }
+      .control-table th,
+      .control-table td {
+        padding: 1rem 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      .control-table th {
+        color: #247CFF;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .control-table td {
+        color: #e5e5e5;
+        font-size: 1rem;
+      }
+      .control-table tr:last-child td {
+        border-bottom: none;
+      }
+      .control-label {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+      .control-agency {
+        background: rgba(36, 124, 255, 0.15);
+        color: #247CFF;
+      }
+      .control-rb {
+        background: rgba(51, 208, 196, 0.15);
+        color: #33D0C4;
+      }
+    </style>
+    <script>
+      // UTM Parameter Handler
+      // Preserves incoming UTM params from campaigns, falls back to defaults
+      (function() {
+        var defined = function(v) { return v !== undefined && v !== null && v !== ''; };
+        
+        // Get UTM params from current URL (from incoming campaign)
+        var params = new URLSearchParams(window.location.search);
+        var incomingUtm = {
+          source: params.get('utm_source'),
+          medium: params.get('utm_medium'),
+          campaign: params.get('utm_campaign'),
+          term: params.get('utm_term'),
+          content: params.get('utm_content')
+        };
+        
+        // Build signup URL with UTM params
+        // Uses incoming params if present, otherwise falls back to defaults
+        window.getSignupUrl = function(contentDefault) {
+          var base = 'https://app.retailerboost.com/signup';
+          var utmParams = new URLSearchParams();
+          
+          // utm_source: incoming or current hostname
+          utmParams.set('utm_source', defined(incomingUtm.source) ? incomingUtm.source : window.location.hostname);
+          
+          // utm_medium: incoming or 'outbound'
+          utmParams.set('utm_medium', defined(incomingUtm.medium) ? incomingUtm.medium : 'outbound');
+          
+          // utm_campaign: incoming or 'email'
+          utmParams.set('utm_campaign', defined(incomingUtm.campaign) ? incomingUtm.campaign : 'email');
+          
+          // utm_content: incoming or location-specific default
+          utmParams.set('utm_content', defined(incomingUtm.content) ? incomingUtm.content : contentDefault);
+          
+          // utm_term: only include if present in incoming
+          if (defined(incomingUtm.term)) {
+            utmParams.set('utm_term', incomingUtm.term);
+          }
+          
+          return base + '?' + utmParams.toString();
+        };
+        
+        // Open Calendly popup with UTM params
+        // Uses incoming params if present, otherwise falls back to defaults
+        window.openCalendly = function(contentDefault) {
+          var utmObj = {
+            utmSource: defined(incomingUtm.source) ? incomingUtm.source : window.location.hostname,
+            utmMedium: defined(incomingUtm.medium) ? incomingUtm.medium : 'outbound',
+            utmCampaign: defined(incomingUtm.campaign) ? incomingUtm.campaign : 'email',
+            utmContent: defined(incomingUtm.content) ? incomingUtm.content : contentDefault
+          };
+          
+          // Only add term if present
+          if (defined(incomingUtm.term)) {
+            utmObj.utmTerm = incomingUtm.term;
+          }
+          
+          Calendly.initPopupWidget({
+            url: 'https://calendly.com/sturrock/intro?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=247CFF',
+            utm: utmObj
+          });
+        };
+        
+        // Update all signup links on page load
+        document.addEventListener('DOMContentLoaded', function() {
+          var links = document.querySelectorAll('a[data-signup]');
+          links.forEach(function(link) {
+            var contentDefault = link.getAttribute('data-signup');
+            link.href = window.getSignupUrl(contentDefault);
+          });
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPR55HV5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="Navigation_nav__PiYhp">
+      <div class="Navigation_container__PSkJX">
+        <a class="Navigation_logo__rl5XE" href="/"><img alt="RetailerBoost" width="180" height="40" decoding="async" data-nimg="1" style="color:transparent" src="/assets/images/RetailerBoost-Logo-Blue-White.png"/></a>
+        <div style="display:flex;gap:2rem;align-items:center;">
+          <div class="nav-links" style="display:flex;gap:1.5rem;align-items:center;">
+            <a href="#scenarios" style="color:#e5e5e5;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;">Scenarios</a>
+            <a href="#how-it-works" style="color:#e5e5e5;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;">How It Works</a>
+            <a href="#pricing" style="color:#e5e5e5;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;">Commission Pricing</a>
+            <a href="#faq" style="color:#e5e5e5;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;">FAQ</a>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:center;">
+            <a href="#" onclick="openCalendly('calendly-nav');return false;" style="color:#e5e5e5;text-decoration:none;font-size:0.95rem;font-weight:500;transition:color 0.2s;">Book a Call</a>
+            <a href="https://app.retailerboost.com/signup" data-signup="nav" target="_blank" rel="noopener" class="Navigation_ctaButton__jQlAz">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section class="Hero_hero__JT9C7">
+        <div class="Hero_container__Wap54">
+          <div class="Hero_content___NoHb">
+            <h1 class="Hero_headline__ASVgO">Add Google Shopping Revenue<br/>For Your Clients<br/><span class="Hero_highlight__TtPR5">Without Asking for More Budget</span></h1>
+
+            <p class="Hero_subheadline__omnUM">We fund the ad spend. You keep the client relationship.<br/>Commission only on incremental sales. <strong style="color:#33D0C4;">No sales = no charge.</strong></p>
+
+            <div class="Hero_ctaGroup__BKron" style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+              <a href="https://app.retailerboost.com/signup" data-signup="hero" target="_blank" rel="noopener" class="Hero_ctaPrimary____c6c" style="color:#fff;padding:1.25rem 3rem;font-size:1.2rem;">Get Started in 5 Minutes</a>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Got questions? <a href="#" onclick="openCalendly('calendly-hero');return false;" style="color:#fff;text-decoration:underline;">Book a call</a></p>
+            </div>
+
+            <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;">
+              <div style="display:flex;align-items:center;gap:0.5rem;color:#e5e5e5;font-size:0.95rem;">
+                <span style="color:#33D0C4;">✓</span> We are not an agency
+              </div>
+              <div style="display:flex;align-items:center;gap:0.5rem;color:#e5e5e5;font-size:0.95rem;">
+                <span style="color:#33D0C4;">✓</span> We never contact your clients
+              </div>
+              <div style="display:flex;align-items:center;gap:0.5rem;color:#e5e5e5;font-size:0.95rem;">
+                <span style="color:#33D0C4;">✓</span> White-label available
+              </div>
+              <div style="display:flex;align-items:center;gap:0.5rem;color:#e5e5e5;font-size:0.95rem;">
+                <span style="color:#33D0C4;">✓</span> 100% aligned incentives
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Hero_gradient__onPwm"></div>
+      </section>
+
+      <!-- Featured Testimonial -->
+      <div style="padding:1.5rem 2rem 4rem;">
+        <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;">
+          <div style="margin-bottom:1rem;color:#FFD700;">★★★★★</div>
+          <blockquote style="font-size:1.35rem;line-height:1.9;color:#fff;font-style:italic;margin:0 0 2rem;max-width:800px;">"The pay-on-results model is genius. I was skeptical at first - how could someone else fund our advertising? But it works exactly as promised. We got sales from day one, and I love that we only pay after we've already made the sale. The <span style="color:#247CFF;font-weight:600;">27.5% order uplift</span> in our first week alone made this a no-brainer decision."</blockquote>
+          <div style="display:flex;align-items:center;gap:1.5rem;">
+            <img src="/assets/images/bea.jpeg" alt="Beatriz Nahuz, CEO of MenFirst" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #247CFF;" onerror="this.style.display='none'">
+            <div style="text-align:left;">
+              <div style="color:#247CFF;font-weight:700;font-size:1.1rem;margin-bottom:0.25rem;">Beatriz Nahuz</div>
+              <div style="color:#ccc;font-size:0.95rem;margin-bottom:0.25rem;">CEO - MenFirst</div>
+              <div style="color:#666;font-size:0.9rem;">menfirst.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How Agencies Use This -->
+      <section id="scenarios" style="padding:5rem 2rem;">
+        <div style="max-width:1000px;margin:0 auto;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;text-align:center;">How Agencies Use This</h2>
+          <p style="text-align:center;color:#e5e5e5;font-size:1.1rem;margin-bottom:3rem;">Common scenarios where agencies slot us in</p>
+          
+          <div class="use-cases-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:1.5rem;">
+            
+            <div style="background:rgba(36,124,255,0.05);border:1px solid rgba(36,124,255,0.15);border-radius:16px;padding:2rem;">
+              <div style="color:#247CFF;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Budget-Capped Clients</div>
+              <h3 style="color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:1rem;">Client Won't Increase Spend</h3>
+              <p style="color:#e5e5e5;line-height:1.7;font-size:0.95rem;margin:0;">You've hit the ceiling on their current budget. Instead of arguing for more spend, you offer additional Shopping revenue that costs them nothing upfront. Growth without the budget conversation.</p>
+            </div>
+            
+            <div style="background:rgba(36,124,255,0.05);border:1px solid rgba(36,124,255,0.15);border-radius:16px;padding:2rem;">
+              <div style="color:#247CFF;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Risky Inventory</div>
+              <h3 style="color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:1rem;">SKUs You Can't Justify Testing</h3>
+              <p style="color:#e5e5e5;line-height:1.7;font-size:0.95rem;margin:0;">Long-tail products, seasonal surplus, new launches with no conversion data. Hand us the inventory you can't risk client budget on. We'll experiment with our own money.</p>
+            </div>
+            
+            <div style="background:rgba(36,124,255,0.05);border:1px solid rgba(36,124,255,0.15);border-radius:16px;padding:2rem;">
+              <div style="color:#247CFF;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Difficult Clients</div>
+              <h3 style="color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:1rem;">Offload the Risk</h3>
+              <p style="color:#e5e5e5;line-height:1.7;font-size:0.95rem;margin:0;">Some clients question everything. Transfer part of their Shopping to a pay-on-results model. If it works, you look smart. If it doesn't, you haven't lost their budget.</p>
+            </div>
+            
+            <div style="background:rgba(36,124,255,0.05);border:1px solid rgba(36,124,255,0.15);border-radius:16px;padding:2rem;">
+              <div style="color:#247CFF;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">White-Label Upsell</div>
+              <h3 style="color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:1rem;">Add Margin With No Work</h3>
+              <p style="color:#e5e5e5;line-height:1.7;font-size:0.95rem;margin:0;">Present this as your own offering. Add your markup to our commission. You earn on every sale we generate without touching a campaign or managing extra budget.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Why This Works for Everyone -->
+      <section style="padding:4rem 2rem;background:rgba(51,208,196,0.03);border-top:1px solid rgba(51,208,196,0.1);border-bottom:1px solid rgba(51,208,196,0.1);">
+        <div style="max-width:900px;margin:0 auto;text-align:center;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:2.5rem;">Completely Aligned Incentives</h2>
+          <div class="aligned-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:1.5rem;">
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem 1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">🏢</div>
+              <p style="color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:1rem;">Agency</p>
+              <p style="color:#33D0C4;font-size:0.9rem;margin:0 0 0.5rem;font-weight:500;">Markup on every sale</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0 0 0.5rem;">Zero delivery work</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0;">No risk</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem 1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">🛍️</div>
+              <p style="color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:1rem;">Client</p>
+              <p style="color:#33D0C4;font-size:0.9rem;margin:0 0 0.5rem;font-weight:500;">Pay only for results</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0 0 0.5rem;">No upfront costs</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0;">Cancel anytime</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem 1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">📈</div>
+              <p style="color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:1rem;">RetailerBoost</p>
+              <p style="color:#33D0C4;font-size:0.9rem;margin:0 0 0.5rem;font-weight:500;">Earns on sales we generate</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0 0 0.5rem;">Funds all ad spend</p>
+              <p style="color:#aaa;font-size:0.9rem;margin:0;">Takes the risk</p>
+            </div>
+          </div>
+          <p style="color:#e5e5e5;font-size:1.1rem;margin-top:2.5rem;max-width:600px;margin-left:auto;margin-right:auto;">Everyone wins when sales happen. If we generate zero orders, nobody pays anything. That's alignment.</p>
+        </div>
+      </section>
+
+      <!-- What We Actually Are -->
+      <section style="padding:4rem 2rem;background:rgba(36,124,255,0.03);border-top:1px solid rgba(36,124,255,0.1);border-bottom:1px solid rgba(36,124,255,0.1);">
+        <div style="max-width:900px;margin:0 auto;text-align:center;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">A Fully Funded, Incremental Google Shopping Layer</h2>
+          <p style="font-size:1.2rem;color:#e5e5e5;line-height:1.8;margin-bottom:1rem;">Google's algorithm buries 40-60% of most product catalogs. Zero impressions. Zero sales. We target that buried inventory and turn it into revenue using our own ad spend.</p>
+          <p style="font-size:1.1rem;color:#aaa;line-height:1.8;margin-bottom:2rem;">Every sale we generate is a sale that wasn't happening before. That's what makes it incremental. Your existing campaigns keep every sale they're already generating.</p>
+          
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1.5rem;margin-top:2.5rem;">
+            <div style="padding:1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;">💰</div>
+              <p style="color:#fff;font-weight:600;margin-bottom:0.5rem;">We Fund 100%</p>
+              <p style="color:#aaa;font-size:0.95rem;margin:0;">All ad spend comes from us</p>
+            </div>
+            <div style="padding:1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;">📈</div>
+              <p style="color:#fff;font-weight:600;margin-bottom:0.5rem;">100% Incremental</p>
+              <p style="color:#aaa;font-size:0.95rem;margin:0;">Sales you weren't getting before</p>
+            </div>
+            <div style="padding:1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎯</div>
+              <p style="color:#fff;font-weight:600;margin-bottom:0.5rem;">Commission Only</p>
+              <p style="color:#aaa;font-size:0.95rem;margin:0;">Pay only when we make sales</p>
+            </div>
+            <div style="padding:1.5rem;">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;">🔒</div>
+              <p style="color:#fff;font-weight:600;margin-bottom:0.5rem;">Zero Overlap</p>
+              <p style="color:#aaa;font-size:0.95rem;margin:0;">Your campaigns stay untouched</p>
+            </div>
+          </div>
+          
+          <div style="margin-top:3rem;padding:1.5rem 2rem;background:rgba(51,208,196,0.1);border:1px solid rgba(51,208,196,0.3);border-radius:12px;max-width:600px;margin-left:auto;margin-right:auto;">
+            <p style="color:#33D0C4;font-size:1.15rem;font-weight:600;text-align:center;margin:0;">No orders = No charge. Ever.</p>
+            <p style="color:#e5e5e5;font-size:1rem;text-align:center;margin:0.75rem 0 0;line-height:1.6;">We only earn when you earn. If we generate zero sales, your client pays zero dollars. Our incentives are completely aligned.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who Controls What -->
+      <section style="padding:4rem 2rem;background:rgba(255,255,255,0.02);">
+        <div style="max-width:800px;margin:0 auto;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;text-align:center;">Who Controls What</h2>
+          <p style="text-align:center;color:#e5e5e5;font-size:1.1rem;margin-bottom:2rem;">You decide which products we target. We run incremental campaigns on the inventory you choose.</p>
+          
+          <table class="control-table">
+            <thead>
+              <tr>
+                <th style="width:50%;">What</th>
+                <th style="width:50%;">Who Controls It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Client relationship</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Pricing to client (add your markup)</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Which products we advertise</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Brand exclusions / negative keywords</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Merchant Center account & product feed</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Pause or stop anytime</td>
+                <td><span class="control-label control-agency">You</span></td>
+              </tr>
+              <tr>
+                <td>Ad spend funding (100%)</td>
+                <td><span class="control-label control-rb">RetailerBoost</span></td>
+              </tr>
+              <tr>
+                <td>Incremental campaign setup</td>
+                <td><span class="control-label control-rb">RetailerBoost</span></td>
+              </tr>
+              <tr>
+                <td>Bidding and optimization</td>
+                <td><span class="control-label control-rb">RetailerBoost</span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p style="text-align:center;color:#aaa;font-size:0.95rem;margin-top:2rem;">You control scope and the product feed. We run separate, incremental campaigns. Zero overlap with your existing work.</p>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="HowItWorks_section___YmGt">
+        <div class="HowItWorks_container__z03jw">
+          <h2 class="HowItWorks_heading__Cf95L">How the Partnership Works</h2>
+          <p class="HowItWorks_subheading__8KKk1">From introduction to ongoing revenue</p>
+
+          <div style="max-width:700px;margin:0 auto;">
+            <div style="display:flex;gap:1.5rem;margin-bottom:2rem;align-items:flex-start;">
+              <div style="min-width:40px;height:40px;background:linear-gradient(135deg, #247CFF, #1A64CC);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">1</div>
+              <div>
+                <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem;">Quick setup</h4>
+                <p style="color:#e5e5e5;line-height:1.7;margin:0;">Invite us to the client's Google Merchant Center (so we can review setup and connect our separate ads account). Install a few lines of JavaScript for attribution & conversion tracking. You decide which products we can target via categories or tags.</p>
+              </div>
+            </div>
+            
+            <div style="display:flex;gap:1.5rem;margin-bottom:2rem;align-items:flex-start;">
+              <div style="min-width:40px;height:40px;background:linear-gradient(135deg, #247CFF, #1A64CC);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">2</div>
+              <div>
+                <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem;">We fund and run campaigns</h4>
+                <p style="color:#e5e5e5;line-height:1.7;margin:0;">We set up Shopping campaigns using our own Google Ads account and our own capital. Your existing account and campaigns stay completely separate.</p>
+              </div>
+            </div>
+            
+            <div style="display:flex;gap:1.5rem;margin-bottom:2rem;align-items:flex-start;">
+              <div style="min-width:40px;height:40px;background:linear-gradient(135deg, #247CFF, #1A64CC);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">3</div>
+              <div>
+                <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem;">Sales generate commission</h4>
+                <p style="color:#e5e5e5;line-height:1.7;margin:0;">We charge our base commission on orders we generate. You add your markup on top. The client pays only for results.</p>
+              </div>
+            </div>
+            
+            <div style="display:flex;gap:1.5rem;align-items:flex-start;">
+              <div style="min-width:40px;height:40px;background:linear-gradient(135deg, #247CFF, #1A64CC);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">4</div>
+              <div>
+                <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0 0 0.5rem;">You keep the difference</h4>
+                <p style="color:#e5e5e5;line-height:1.7;margin:0;">Your markup is your margin. No delivery work required. Pause or scale with one email. No contracts, no commitments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Example -->
+      <section id="pricing" style="padding:4rem 2rem;">
+        <div style="max-width:700px;margin:0 auto;">
+          <div style="background:rgba(36,124,255,0.05);border:1px solid rgba(36,124,255,0.2);border-radius:20px;padding:2.5rem;text-align:center;">
+            <h2 style="font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:2rem;">Simple Partner Pricing</h2>
+            
+            <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+              <div style="text-align:center;">
+                <div style="color:#aaa;font-size:0.9rem;margin-bottom:0.5rem;">Our Base Commission</div>
+                <div style="color:#fff;font-size:1.75rem;font-weight:700;">Starting at 12%</div>
+              </div>
+              <div style="color:#247CFF;font-size:2rem;font-weight:300;">+</div>
+              <div style="text-align:center;">
+                <div style="color:#aaa;font-size:0.9rem;margin-bottom:0.5rem;">Your Markup</div>
+                <div style="color:#fff;font-size:1.75rem;font-weight:700;">You Decide</div>
+              </div>
+            </div>
+            
+            <p style="color:#e5e5e5;line-height:1.7;margin:0;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:10px;"><strong style="color:#fff;">Example:</strong> We charge 12%, you add 3% markup. Client pays 15% commission on sales. You earn 3% on every order we generate, with no ad spend, no campaign work, and no risk.</p>
+            
+            <p style="color:#aaa;font-size:0.95rem;line-height:1.6;margin-top:1.5rem;margin-bottom:0;"><strong style="color:#e5e5e5;">Tighter margins?</strong> We can work with custom commission rates. If a client's margins are slim, we'll find a structure that works for everyone. Just ask.</p>
+            
+            <p style="color:#aaa;font-size:0.95rem;line-height:1.6;margin-top:1rem;margin-bottom:0;"><strong style="color:#e5e5e5;">Want more volume?</strong> Higher commission rates give us more margin between ad spend and commission, which means we can bid more aggressively and drive more orders.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agency FAQs -->
+      <section id="faq" style="padding:4rem 2rem;">
+        <div style="max-width:900px;margin:0 auto;">
+          <div style="border:1px solid rgba(36, 124, 255, .2);border-radius:20px;padding:3rem;">
+            <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1rem;text-align:center;">Questions Agencies Ask</h2>
+            <p style="text-align:center;font-size:1.1rem;color:#e5e5e5;margin-bottom:2.5rem;">The things you're probably wondering</p>
+            
+            <div style="max-width:800px;margin:0 auto;">
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do you compete with our PPC work?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. We are not an agency. We don't pitch strategy, we don't consult, we don't try to expand scope. We run a separate Google Shopping layer using products you specify. Your campaigns, your strategy, your client relationship-all untouched.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Who owns the client relationship?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>You do. You can sign up on behalf of your client using your own email address-keeping our service completely white-labeled. Or if the client signs up directly with their email, they'll receive login access and order alerts from our system. Either way, we never pitch, upsell, or try to expand scope. We don't compete for the relationship.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do you ever contact our clients?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>We only contact the email address used to sign up. If you sign up on behalf of your client, you receive all communication. If the client signs up directly, they receive transactional emails only: signup confirmation, login alerts, performance summaries. We never pitch, upsell, or market to them. We have no interest in the client relationship. Our business model is ad spend investment, not client services.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Can we choose which products you advertise?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. You control scope through the client's Merchant Center. Give us specific product categories, exclude certain SKUs, or hand us only the inventory you can't make work yourself. You set the boundaries, we operate within them.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do you make changes to the Merchant Center or product feed?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. We never modify the Merchant Center account or product feed. We only need access to review the setup and connect our separate Google Ads account. The product feed stays exactly as you or the client configured it. You retain full ownership and control.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Can we white-label this?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Absolutely. Present it as your own service. Add your markup to our commission. We stay invisible. Many agencies offer this as a "performance Shopping" or "commission-based Shopping" add-on under their own brand.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>How do agencies make money from this?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>You add markup to our base commission. If we charge 12% and you quote 15% to the client, you keep 3% of every order we generate. No campaign work, no ad spend risk, no extra hours. Pure margin on incremental sales.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do we have to charge a markup?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. Markup is entirely optional. Some agencies pass through our commission at cost, which means a higher perceived ROI for their clients. You decide the commission structure and how you bill your clients. We stay out of it.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Does this affect our existing campaigns?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. We use our own Google Ads account, funded with our own capital. Your campaigns run exactly as before. We target products you tell us to. Not sure what products Google's algorithm is ignoring in your campaigns? We're happy to take a look with you and come up with a plan. Zero competition, zero cannibalization.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>We already run Google Ads on a CPA model. How is this different?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>You're charging a fee based on performance you deliver. We're funding the ad spend ourselves and only taking commission on sales we generate. You keep doing what you do. We run separately, targeting inventory your campaigns aren't reaching. It's additive, not competitive.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Is there any financial risk for the agency?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>None. We fund all ad spend. The client pays commission only on sales we generate. If we generate zero sales, nobody pays anything. The risk sits entirely with us.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>What if the client is already running Shopping ads?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>That's the typical scenario. We run alongside existing Shopping campaigns. You tell us which products to focus on-usually the ones that aren't performing or aren't getting impressions. Your winners stay yours. We work on the rest.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Can we cancel anytime?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Yes. No contracts. No notice periods. One email and we pause. You're never locked in. We only continue running if it works for everyone.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do you guarantee sales volume?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. We cannot promise how many orders we will generate. Some months may bring many orders, others fewer, or even zero. What we can promise is: if we generate zero orders, we charge zero commission. You only pay the pre-agreed rate when we deliver results.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Are commissions refunded if a customer returns an order?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. Commission is based on the initial purchase value because we front the advertising cost that generated the sale, and Google doesn't refund those costs either. That said, we understand there are occasionally exceptional circumstances and are happy to review requests on a case-by-case basis.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>How can I verify your tracking is accurate?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>You can inspect our attribution script directly-feel free to paste it into ChatGPT to see exactly what it does. Many clients also run third-party attribution tools alongside ours to compare data. We encourage this so you can verify our tracking against your own tools.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>How is the ROI locked in?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Because you only pay a fixed percentage of each order, ROI is mathematically locked in. At 12% commission, every $1 paid returns $8.33 in revenue. We take on all the ad spend variability, so cost-per-acquisition is always predictable.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>What's the catch?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>There isn't one. We take on all the ad spend risk. We can't guarantee volume - some stores work better than others. The only caveat: if we're losing money on a store, we may dial back our investment. But if we generate nothing, you pay nothing. Our interests are 100% aligned.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Do you charge a retainer, subscription or monthly fee?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>No. There's no retainer, no setup fee, no monthly minimum. It's purely performance-based. You only pay commission when we generate sales.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>If this works, why isn't everyone doing it?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Because fronting ad spend is irrational at small scale. The math only works with portfolio-level diversification across millions of SKUs and thousands of accounts. Agencies doing CPA are still capped by client budgets. We apply a hedge-fund-style approach: absorb variance across a huge portfolio, aim for small margins per order, and scale. It requires a different capital structure and risk appetite than agency economics allow for.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>Who else offers this model?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>We do. Our sister company <a href="https://redbrain.com" target="_blank" rel="noopener" style="color:#247CFF;text-decoration:underline;">Redbrain</a> has been running this model across Europe for years. Last year we generated $1.5 billion in revenue for merchants. RetailerBoost is a spin-off that brings this model to Shopify stores in new markets. <a href="https://orderlegend.com" target="_blank" rel="noopener" style="color:#247CFF;text-decoration:underline;">OrderLegend</a> is another venture in our portfolio using the same approach.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item" style="border-bottom:none;">
+                <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+                  <h4>How does RetailerBoost make money?</h4>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>We keep the difference between the commission we charge and the ad spend we invest. We're aiming to break even on most orders - it's a volume play for us. We have the risk appetite and capital to make a few cents per order work. That's why we can fund campaigns others won't.</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#e5e5e5;font-size:1.1rem;margin-bottom:1rem;">Got another question? Let's talk.</p>
+              <a href="#" onclick="openCalendly('calendly-faq');return false;" style="display:inline-block;padding:0.75rem 2rem;background:linear-gradient(135deg, #247CFF, #1A64CC);color:#fff;text-decoration:none;font-size:1rem;font-weight:700;border-radius:8px;transition:all .3s ease;">Book a Call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison: Agency CPA vs RetailerBoost -->
+      <section style="padding:4rem 2rem;">
+        <div style="max-width:900px;margin:0 auto;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:0.5rem;text-align:center;">Traditional Agency CPA vs RetailerBoost</h2>
+          <p style="text-align:center;color:#aaa;font-size:1rem;margin-bottom:2rem;">Two different models. Both performance-based. One key difference.</p>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);">
+            <!-- Header -->
+            <div style="background:rgba(255,255,255,0.05);padding:1.25rem;border-bottom:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#aaa;font-size:0.9rem;font-weight:600;margin:0;text-transform:uppercase;letter-spacing:0.05em;">Agency CPA Model</p>
+            </div>
+            <div style="background:rgba(36,124,255,0.1);padding:1.25rem;border-bottom:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#247CFF;font-size:0.9rem;font-weight:600;margin:0;text-transform:uppercase;letter-spacing:0.05em;">RetailerBoost</p>
+            </div>
+            
+            <!-- Who funds ads -->
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);border-right:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Who funds the ads</p>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Client budget</p>
+            </div>
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(36,124,255,0.03);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Who funds the ads</p>
+              <p style="color:#fff;font-size:1rem;margin:0;font-weight:600;">We do. 100%.</p>
+            </div>
+            
+            <!-- Who takes the risk -->
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);border-right:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Who takes the risk</p>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Client (ad spend is their money)</p>
+            </div>
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(36,124,255,0.03);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Who takes the risk</p>
+              <p style="color:#fff;font-size:1rem;margin:0;font-weight:600;">We do. Entirely.</p>
+            </div>
+            
+            <!-- Budget ceiling -->
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);border-right:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Budget ceiling</p>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Capped by what client will spend</p>
+            </div>
+            <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(36,124,255,0.03);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">Budget ceiling</p>
+              <p style="color:#fff;font-size:1rem;margin:0;font-weight:600;">No ceiling. We invest what works.</p>
+            </div>
+            
+            <!-- If campaign loses money -->
+            <div style="padding:1rem 1.25rem;border-right:1px solid rgba(255,255,255,0.1);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">If campaign loses money</p>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Client loses money</p>
+            </div>
+            <div style="padding:1rem 1.25rem;background:rgba(36,124,255,0.03);">
+              <p style="color:#aaa;font-size:0.85rem;margin:0 0 0.25rem;text-transform:uppercase;letter-spacing:0.03em;">If campaign loses money</p>
+              <p style="color:#fff;font-size:1rem;margin:0;font-weight:600;">We lose money. Client pays nothing.</p>
+            </div>
+          </div>
+          
+          <p style="text-align:center;color:#aaa;font-size:0.95rem;margin-top:1.5rem;">Both models are smart. Ours just removes the budget conversation entirely.</p>
+        </div>
+      </section>
+
+      <!-- What We're Not -->
+      <section style="padding:4rem 2rem;background:rgba(255,255,255,0.02);">
+        <div style="max-width:800px;margin:0 auto;text-align:center;">
+          <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:2rem;">What We Are Not</h2>
+          
+          <div class="not-grid" style="display:grid;grid-template-columns:repeat(2, 1fr);gap:1rem;max-width:500px;margin:0 auto;">
+            <div style="padding:1rem;background:rgba(255,255,255,0.03);border-radius:8px;">
+              <div style="color:#e25555;font-size:1.25rem;margin-bottom:0.5rem;">✕</div>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Not an agency</p>
+            </div>
+            <div style="padding:1rem;background:rgba(255,255,255,0.03);border-radius:8px;">
+              <div style="color:#e25555;font-size:1.25rem;margin-bottom:0.5rem;">✕</div>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Not a competitor</p>
+            </div>
+            <div style="padding:1rem;background:rgba(255,255,255,0.03);border-radius:8px;">
+              <div style="color:#e25555;font-size:1.25rem;margin-bottom:0.5rem;">✕</div>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Not a consultant</p>
+            </div>
+            <div style="padding:1rem;background:rgba(255,255,255,0.03);border-radius:8px;">
+              <div style="color:#e25555;font-size:1.25rem;margin-bottom:0.5rem;">✕</div>
+              <p style="color:#e5e5e5;font-size:1rem;margin:0;">Not trying to take clients</p>
+            </div>
+          </div>
+          
+          <p style="color:#aaa;font-size:1.1rem;margin-top:2rem;line-height:1.7;">We're ad spend investors. Every investment decision is based on data and performance-not guesswork. We need agencies like you to identify the right clients and control scope. We're genuinely complementary.</p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section style="padding:5rem 2rem;">
+        <div style="max-width:900px;margin:0 auto;">
+          
+          <div style="margin-bottom:4rem;text-align:center;">
+            <h2 style="font-size:2rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">Who We Are</h2>
+            <p style="font-size:1.15rem;line-height:1.8;color:#e5e5e5;margin-bottom:1rem;">RetailerBoost is built by ad spend investors. We've deployed hundreds of millions in advertising capital for major retailers and built the technology infrastructure that powers comparison shopping across Europe.</p>
+            <p style="font-size:1.15rem;line-height:1.8;color:#e5e5e5;">As a <strong style="color:#247CFF;">30m.com</strong> company, we're backed by a portfolio of successful technology ventures focused on e-commerce and digital marketing.</p>
+          </div>
+          
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem;">
+            
+            <div style="text-align:center;padding:2rem;border:1px solid rgba(36,124,255,0.2);border-radius:16px;">
+              <img src="/assets/images/adam-sturrock.jpeg" alt="Adam Sturrock" class="team-photo" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid #247CFF;margin-bottom:1rem;"/>
+              <h3 style="color:#247CFF;font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">Adam Sturrock</h3>
+              <p style="color:#aaa;font-size:0.9rem;margin-bottom:1rem;">Co-Founder</p>
+              <p style="color:#e5e5e5;font-size:0.9rem;line-height:1.6;margin-bottom:1rem;">Y Combinator alumni and exited e-commerce founder with a track record of building successful technologies and digital advertising platforms.</p>
+              <a href="https://www.linkedin.com/in/adamsturrock/" target="_blank" rel="noopener noreferrer" style="color:#247CFF;text-decoration:none;font-size:0.85rem;">LinkedIn →</a>
+            </div>
+            
+            <div style="text-align:center;padding:2rem;border:1px solid rgba(36,124,255,0.2);border-radius:16px;">
+              <img src="/assets/images/paul-humphreys.jpeg" alt="Paul Humphreys" class="team-photo" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid #247CFF;margin-bottom:1rem;"/>
+              <h3 style="color:#247CFF;font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">Paul Humphreys</h3>
+              <p style="color:#aaa;font-size:0.9rem;margin-bottom:1rem;">Co-Founder</p>
+              <p style="color:#e5e5e5;font-size:0.9rem;line-height:1.6;margin-bottom:1rem;">The brains behind our Google Shopping campaign performance. Managed $100M+ in ad spend and founding team at Redbrain - Google's largest comparison shopping partner in Europe.</p>
+              <a href="https://www.linkedin.com/in/paulh123/" target="_blank" rel="noopener noreferrer" style="color:#247CFF;text-decoration:none;font-size:0.85rem;">LinkedIn →</a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Footer CTA -->
+      <section class="FooterCTA_section__uO_0T">
+        <div class="FooterCTA_container__iguBQ">
+          <div class="FooterCTA_ctaBox__cIEiy">
+            <div class="FooterCTA_ctaContent__TvqcO">
+              <h2 class="FooterCTA_ctaHeading__DDJqx">Let's Talk</h2>
+              <p class="FooterCTA_ctaText__U6Uiz">15 minutes to see if this makes sense for your agency.</p>
+              <div style="display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap;">
+                <a href="https://app.retailerboost.com/signup" data-signup="footer-cta" target="_blank" rel="noopener" class="FooterCTA_ctaButton__U5pyF">Get Started</a>
+                <a href="#" onclick="openCalendly('calendly-footer');return false;" style="display:inline-flex;align-items:center;justify-content:center;padding:1rem 2rem;background:transparent;border:2px solid rgba(255,255,255,0.3);color:#fff;text-decoration:none;font-size:1.1rem;font-weight:600;border-radius:8px;transition:all .3s ease;">Book a Call</a>
+              </div>
+              <p class="FooterCTA_ctaSubtext__5fUoe">No upfront costs • No sales, no charge • Cancel anytime</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer style="padding:3rem 2rem 2rem;text-align:center;color:#aaa;border-top:1px solid rgba(36,124,255,0.2);margin-top:0;background:#0B1314;">
+      <div style="margin-bottom:1rem;">
+        <p style="margin:0;font-size:0.9rem;color:#aaa;">RetailerBoost is not an agency. We are ad spend investors.</p>
+      </div>
+      <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;">
+        <a href="/terms.html" style="color:#aaa;text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Terms & Conditions</a>
+        <a href="/privacy.html" style="color:#aaa;text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Privacy Policy</a>
+        <a href="/cookies.html" style="color:#aaa;text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Cookie Policy</a>
+      </div>
+      <p style="margin:0;font-size:0.9rem;color:#aaa;">© 2025 RetailerBoost. All rights reserved.</p>
+    </footer>
+    
+    <!-- RetailerBoost Signup Attribution Tracking -->
+    <!-- NOT FOR AD TRACKING - This tracks signup attribution only -->
+    <script>
+    (function() {
+      'use strict';
+      
+      // Only run if we have UTM params or a referrer worth tracking
+      var params = new URLSearchParams(window.location.search);
+      var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      var hasUTM = utmParams.some(function(p) { return params.has(p); });
+      var referrer = document.referrer || '';
+      
+      // Only track if we have UTMs or a meaningful referrer
+      if (!hasUTM && !referrer) {
+        return;
+      }
+      
+      // Build the tracking URL
+      var trackUrl = 'https://app.retailerboost.com/signup-attribution?';
+      var trackParams = [];
+      
+      // Add UTM params
+      utmParams.forEach(function(p) {
+        var value = params.get(p);
+        if (value) {
+          trackParams.push(p + '=' + encodeURIComponent(value));
+        }
+      });
+      
+      // Add referrer
+      if (referrer) {
+        trackParams.push('referrer=' + encodeURIComponent(referrer));
+      }
+      
+      // Add the domain where this was captured (for debugging)
+      trackParams.push('captured_on=' + encodeURIComponent(window.location.hostname));
+      
+      trackUrl += trackParams.join('&');
+      
+      // Load the tracking pixel in a hidden iframe
+      var iframe = document.createElement('iframe');
+      iframe.src = trackUrl;
+      iframe.style.cssText = 'position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;border:none;';
+      iframe.setAttribute('aria-hidden', 'true');
+      iframe.setAttribute('tabindex', '-1');
+      
+      // Append to body when ready
+      if (document.body) {
+        document.body.appendChild(iframe);
+      } else {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.appendChild(iframe);
+        });
+      }
+    })();
+    </script>
+  </body>
+</html>
