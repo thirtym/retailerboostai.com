@@ -1375,6 +1375,10 @@
             return;
           }
           
+          // Video is playing, not waiting
+          isWaiting = false;
+          updateCursor();
+          
           isFadingOut = false;
           video.src = getVideoPath(videoNum);
           
