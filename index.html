@@ -295,7 +295,7 @@
       .agent-avatar video {
         z-index: 2;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 1s ease-in-out;
       }
       
       .agent-avatar video.visible {
@@ -1286,7 +1286,7 @@
         
         var isVideoReady = false;
         var isFadingOut = false;
-        var fadeDuration = 0.5; // seconds, matches CSS transition
+        var fadeDuration = 1; // seconds, matches CSS transition
         
         function playAnimation() {
           if (!isVideoReady) return;
