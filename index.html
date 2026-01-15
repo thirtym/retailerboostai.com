@@ -273,14 +273,33 @@
         position: relative;
         z-index: 1;
         box-shadow: 0 0 50px rgba(36, 124, 255, 0.5), 0 0 100px rgba(36, 124, 255, 0.25);
+        overflow: hidden;
       }
       
-      .agent-avatar img {
+      .agent-avatar img,
+      .agent-avatar video {
         width: 100%;
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
         object-position: center top;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .agent-avatar img {
+        z-index: 1;
+      }
+      
+      .agent-avatar video {
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      .agent-avatar video.visible {
+        opacity: 1;
       }
       
       .agent-name {
@@ -1259,6 +1278,66 @@
           url: 'https://calendly.com/sturrock/intro?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=247CFF'
         });
       }
+      
+      // Ada video animation
+      document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('ada-video');
+        if (!video) return;
+        
+        var isVideoReady = false;
+        var isFadingOut = false;
+        var fadeDuration = 0.5; // seconds, matches CSS transition
+        
+        function playAnimation() {
+          if (!isVideoReady) return;
+          
+          // Reset state
+          isFadingOut = false;
+          video.currentTime = 0;
+          
+          // Fade in the video
+          video.classList.add('visible');
+          
+          // Play the video
+          video.play().catch(function(e) {
+            console.log('Video play failed:', e);
+          });
+        }
+        
+        // Check if we're in the last 0.5 seconds to start fade out
+        video.addEventListener('timeupdate', function() {
+          if (!isFadingOut && video.duration && video.currentTime >= video.duration - fadeDuration) {
+            isFadingOut = true;
+            video.classList.remove('visible');
+          }
+        });
+        
+        // When video ends, schedule next play
+        video.addEventListener('ended', function() {
+          // Wait 5 seconds before next play
+          setTimeout(playAnimation, 5000);
+        });
+        
+        // When video can play through without buffering
+        video.addEventListener('canplaythrough', function() {
+          if (!isVideoReady) {
+            isVideoReady = true;
+            playAnimation();
+          }
+        });
+        
+        // Fallback: if video loads but canplaythrough doesn't fire
+        video.addEventListener('loadeddata', function() {
+          if (!isVideoReady) {
+            setTimeout(function() {
+              if (!isVideoReady) {
+                isVideoReady = true;
+                playAnimation();
+              }
+            }, 1000);
+          }
+        });
+      });
     </script>
   </head>
   <body>
@@ -1316,6 +1395,7 @@
             <div class="agent-card">
               <div class="agent-avatar">
                 <img src="/assets/images/ada-ai-ppc-agent.png" alt="Ada - AI Shopping Ads Agent" />
+                <video id="ada-video" src="/assets/images/ada-animated.mp4" muted playsinline preload="auto"></video>
               </div>
               <div class="agent-name">Ada</div>
               <div class="agent-role">AI Google Shopping Ads Agent</div>
