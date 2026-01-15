@@ -294,12 +294,6 @@
       
       .agent-avatar video {
         z-index: 2;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-      }
-      
-      .agent-avatar video.visible {
-        opacity: 1;
       }
       
       .agent-name {
@@ -1284,35 +1278,27 @@
         var video = document.getElementById('ada-video');
         if (!video) return;
         
-        var isVideoReady = false;
-        var isFadingOut = false;
-        var fadeDuration = 1; // seconds, matches CSS transition
+        var totalVideos = 11;
+        var isFirstPlay = true;
+        
+        function getRandomVideo() {
+          var randomIndex = Math.floor(Math.random() * totalVideos) + 1;
+          return '/assets/images/ada-loop-' + randomIndex + '.mp4';
+        }
         
         function playAnimation() {
-          if (!isVideoReady) return;
+          // First play uses ada-loop-1 (the wave), subsequent plays are random
+          if (!isFirstPlay) {
+            video.src = getRandomVideo();
+          }
+          isFirstPlay = false;
           
-          // Reset state
-          isFadingOut = false;
-          video.currentTime = 0;
-          
-          // Fade in the video
-          video.classList.add('visible');
-          
-          // Play the video
           video.play().catch(function(e) {
             console.log('Video play failed:', e);
           });
         }
         
-        // Check if we're in the last 0.5 seconds to start fade out
-        video.addEventListener('timeupdate', function() {
-          if (!isFadingOut && video.duration && video.currentTime >= video.duration - fadeDuration) {
-            isFadingOut = true;
-            video.classList.remove('visible');
-          }
-        });
-        
-        // When video ends, schedule next play
+        // When video ends, schedule next play with random video
         video.addEventListener('ended', function() {
           // Wait 2.5 seconds before next play
           setTimeout(playAnimation, 2500);
@@ -1320,18 +1306,16 @@
         
         // When video can play through without buffering
         video.addEventListener('canplaythrough', function() {
-          if (!isVideoReady) {
-            isVideoReady = true;
+          if (isFirstPlay) {
             playAnimation();
           }
         });
         
         // Fallback: if video loads but canplaythrough doesn't fire
         video.addEventListener('loadeddata', function() {
-          if (!isVideoReady) {
+          if (isFirstPlay) {
             setTimeout(function() {
-              if (!isVideoReady) {
-                isVideoReady = true;
+              if (isFirstPlay) {
                 playAnimation();
               }
             }, 1000);
@@ -1395,7 +1379,7 @@
             <div class="agent-card">
               <div class="agent-avatar">
                 <img src="/assets/images/ada-ai-ppc-agent.png" alt="Ada - AI Shopping Ads Agent" />
-                <video id="ada-video" src="/assets/images/ada-animated.mp4" muted playsinline preload="auto"></video>
+                <video id="ada-video" src="/assets/images/ada-loop-1.mp4" muted playsinline preload="auto"></video>
               </div>
               <div class="agent-name">Ada</div>
               <div class="agent-role">AI Google Shopping Ads Agent</div>
