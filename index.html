@@ -1401,11 +1401,21 @@
         buildPlaylist();
         preloadUpcoming();
         
-        // Wait for first video to be ready, then play
+        // Wait for first video to be ready, then play after 2 second delay
+        var initialDelay = 2000; // 2 seconds before first animation
+        var startTime = Date.now();
+        
         function waitAndPlay() {
-          if (isVideoReady(1)) {
+          var elapsed = Date.now() - startTime;
+          var remainingDelay = Math.max(0, initialDelay - elapsed);
+          
+          if (isVideoReady(1) && remainingDelay === 0) {
             playAnimation();
+          } else if (isVideoReady(1)) {
+            // Video ready but still waiting for initial delay
+            setTimeout(playAnimation, remainingDelay);
           } else {
+            // Video not ready yet, keep checking
             setTimeout(waitAndPlay, 100);
           }
         }
