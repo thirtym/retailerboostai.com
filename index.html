@@ -1349,6 +1349,9 @@
           return preloadedVideos[num] && preloadedVideos[num].ready;
         }
         
+        var isFadingOut = false;
+        var fadeDuration = 0.1; // 100ms fade
+        
         function playAnimation() {
           var videoNum = playlist[currentIndex];
           
@@ -1359,7 +1362,12 @@
             return;
           }
           
+          isFadingOut = false;
           video.src = getVideoPath(videoNum);
+          
+          // Fade in
+          video.classList.add('visible');
+          
           video.play().catch(function(e) {
             console.log('Video play failed:', e);
           });
@@ -1374,6 +1382,14 @@
           // Preload upcoming videos
           preloadUpcoming();
         }
+        
+        // Check if we're in the last 100ms to start fade out
+        video.addEventListener('timeupdate', function() {
+          if (!isFadingOut && video.duration && video.currentTime >= video.duration - fadeDuration) {
+            isFadingOut = true;
+            video.classList.remove('visible');
+          }
+        });
         
         // When video ends, schedule next play
         video.addEventListener('ended', function() {
