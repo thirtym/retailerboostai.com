@@ -1404,10 +1404,37 @@
         });
         
         // When video ends, schedule next play
+        var waitingTimer = null;
+        var isWaiting = false;
+        
         video.addEventListener('ended', function() {
           // Wait 4.5 seconds before next play (feels like an easter egg)
-          setTimeout(playAnimation, 4500);
+          isWaiting = true;
+          waitingTimer = setTimeout(function() {
+            isWaiting = false;
+            playAnimation();
+          }, 4500);
         });
+        
+        // Click to skip waiting period and play next video
+        var avatarEl = document.querySelector('.agent-avatar');
+        var clickCooldown = false;
+        
+        if (avatarEl) {
+          avatarEl.style.cursor = 'pointer';
+          avatarEl.addEventListener('click', function() {
+            if (isWaiting && waitingTimer && !clickCooldown) {
+              clickCooldown = true;
+              clearTimeout(waitingTimer);
+              isWaiting = false;
+              playAnimation();
+              // Reset cooldown after video starts
+              setTimeout(function() {
+                clickCooldown = false;
+              }, 500);
+            }
+          });
+        }
         
         // Initialize
         buildPlaylist();
