@@ -294,6 +294,12 @@
       
       .agent-avatar video {
         z-index: 2;
+        opacity: 0;
+        transition: opacity 100ms ease-in-out;
+      }
+      
+      .agent-avatar video.visible {
+        opacity: 1;
       }
       
       .agent-name {
@@ -1279,65 +1285,115 @@
         if (!video) return;
         
         var totalVideos = 11;
+        var playlist = [];
+        var currentIndex = 0;
+        var preloadedVideos = {};
         var isFirstPlay = true;
-        var recentVideos = [1]; // Start with video 1 in history
         
-        function getRandomVideo() {
-          // Build list of available videos (exclude last 10 played)
-          var available = [];
-          for (var i = 1; i <= totalVideos; i++) {
-            if (recentVideos.indexOf(i) === -1) {
-              available.push(i);
-            }
+        // Fisher-Yates shuffle
+        function shuffle(array) {
+          for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
           }
-          
-          // Pick random from available
-          var randomIndex = available[Math.floor(Math.random() * available.length)];
-          
-          // Add to recent history, keep only last 10
-          recentVideos.push(randomIndex);
-          if (recentVideos.length > 10) {
-            recentVideos.shift();
+          return array;
+        }
+        
+        // Build shuffled playlist: video 1 first, then 2-11 shuffled
+        function buildPlaylist() {
+          var others = [];
+          for (var i = 2; i <= totalVideos; i++) {
+            others.push(i);
           }
+          shuffle(others);
+          playlist = [1].concat(others);
+          currentIndex = 0;
+          preloadedVideos = {};
+        }
+        
+        function getVideoPath(num) {
+          return '/assets/images/ada-loop-' + num + '.mp4';
+        }
+        
+        // Preload a video and mark as ready when fully loaded
+        function preloadVideo(num) {
+          if (preloadedVideos[num]) return; // Already preloading/preloaded
           
-          return '/assets/images/ada-loop-' + randomIndex + '.mp4';
+          var preloadEl = document.createElement('video');
+          preloadEl.preload = 'auto';
+          preloadEl.muted = true;
+          preloadEl.src = getVideoPath(num);
+          
+          preloadedVideos[num] = { ready: false, element: preloadEl };
+          
+          preloadEl.addEventListener('canplaythrough', function() {
+            preloadedVideos[num].ready = true;
+          });
+          
+          // Start loading
+          preloadEl.load();
+        }
+        
+        // Preload upcoming videos in playlist order
+        function preloadUpcoming() {
+          // Preload next 3 videos in playlist
+          for (var i = 0; i < 3; i++) {
+            var idx = (currentIndex + i) % playlist.length;
+            preloadVideo(playlist[idx]);
+          }
+        }
+        
+        function isVideoReady(num) {
+          return preloadedVideos[num] && preloadedVideos[num].ready;
         }
         
         function playAnimation() {
-          // First play uses ada-loop-1 (the wave), subsequent plays are random
-          if (!isFirstPlay) {
-            video.src = getRandomVideo();
-          }
-          isFirstPlay = false;
+          var videoNum = playlist[currentIndex];
           
+          // Check if video is ready
+          if (!isVideoReady(videoNum)) {
+            // Wait and retry
+            setTimeout(playAnimation, 100);
+            return;
+          }
+          
+          video.src = getVideoPath(videoNum);
           video.play().catch(function(e) {
             console.log('Video play failed:', e);
           });
+          
+          // Move to next in playlist
+          currentIndex++;
+          if (currentIndex >= playlist.length) {
+            // Reshuffle for next cycle (keep video 1 first)
+            buildPlaylist();
+          }
+          
+          // Preload upcoming videos
+          preloadUpcoming();
         }
         
-        // When video ends, schedule next play with random video
+        // When video ends, schedule next play
         video.addEventListener('ended', function() {
           // Wait 1 second before next play
           setTimeout(playAnimation, 1000);
         });
         
-        // When video can play through without buffering
-        video.addEventListener('canplaythrough', function() {
-          if (isFirstPlay) {
-            playAnimation();
-          }
-        });
+        // Initialize
+        buildPlaylist();
+        preloadUpcoming();
         
-        // Fallback: if video loads but canplaythrough doesn't fire
-        video.addEventListener('loadeddata', function() {
-          if (isFirstPlay) {
-            setTimeout(function() {
-              if (isFirstPlay) {
-                playAnimation();
-              }
-            }, 1000);
+        // Wait for first video to be ready, then play
+        function waitAndPlay() {
+          if (isVideoReady(1)) {
+            playAnimation();
+          } else {
+            setTimeout(waitAndPlay, 100);
           }
-        });
+        }
+        waitAndPlay();
       });
     </script>
   </head>
