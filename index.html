@@ -1280,9 +1280,26 @@
         
         var totalVideos = 11;
         var isFirstPlay = true;
+        var recentVideos = [1]; // Start with video 1 in history
         
         function getRandomVideo() {
-          var randomIndex = Math.floor(Math.random() * totalVideos) + 1;
+          // Build list of available videos (exclude last 10 played)
+          var available = [];
+          for (var i = 1; i <= totalVideos; i++) {
+            if (recentVideos.indexOf(i) === -1) {
+              available.push(i);
+            }
+          }
+          
+          // Pick random from available
+          var randomIndex = available[Math.floor(Math.random() * available.length)];
+          
+          // Add to recent history, keep only last 10
+          recentVideos.push(randomIndex);
+          if (recentVideos.length > 10) {
+            recentVideos.shift();
+          }
+          
           return '/assets/images/ada-loop-' + randomIndex + '.mp4';
         }
         
